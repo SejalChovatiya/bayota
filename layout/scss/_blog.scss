@@ -1,0 +1,32 @@
+// 
+// blog.scss
+// 
+
+// my blog start
+
+.blog-box {
+    .date-box {
+        border: 1px solid rgba($primary, 0.1);
+        transition: all 0.3s ease-in-out;
+        width: 74px;
+        height: 115px;
+        padding: 22px 15px;
+    }
+    &:hover, &.active {
+        .date-box {
+            border: 1px solid $primary;
+        }        
+    }
+}
+
+@media (max-width:768px){
+    .blog-box {
+        .date-box {
+            height: 105px;
+        }
+    }
+}
+
+
+
+

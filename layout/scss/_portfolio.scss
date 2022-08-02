@@ -1,0 +1,110 @@
+// 
+// portfolio.scss
+// 
+
+// creative works start
+
+.cat-list {
+    .categories {
+        cursor: pointer;
+        color: $dark; 
+        &.active {
+            color: $primary;    
+        }
+    }
+    &:hover, &:focus {
+        .categories {
+            color: $primary;
+        }
+    }
+}
+
+.img-box{
+        .item-caption {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba($dark, 0.8);
+            opacity: 0;
+            transition: 0.5s ease;
+            transform: scale(0);    
+                .work-content {
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+        }
+
+    &:hover {
+        .item-caption {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+.masonary-grid {
+    column-count: 3;
+    column-gap: 30px;
+    .masonary-item {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+
+.filter-box {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+
+@media (max-width: 575.98px) { 
+    .masonary-grid {
+        column-count: 1;
+        column-gap: 10px;
+        .masonary-item {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) { 
+    .masonary-grid {
+        column-count: 2;
+        column-gap: 8px;
+        .masonary-item {
+            margin-bottom: 8px;
+        }
+    }
+}  
+
+@media (min-width: 768px) and (max-width: 1199.98px) { 
+    .masonary-grid {
+        column-count: 3;
+        column-gap: 16px;
+        .masonary-item {
+            margin-bottom: 16px;
+        }
+    }
+} 
+
+@media (min-width: 1200px) and (max-width: 1399.98px) { 
+    .masonary-grid {
+        column-count: 3;
+        column-gap: 26px;
+        .masonary-item {
+            margin-bottom: 26px;
+        }
+    }
+} 
+
+
+
+
